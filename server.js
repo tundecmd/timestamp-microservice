@@ -13,7 +13,7 @@ const requestHandler = (req, res) => {
     })
     
   } else if (req.url.startsWith('/api/timestamp')) {
-      const dateString = req.url.split('/api/timestamp/')[1];
+      const dateString = req.url.split('/api/timestamp/:')[1];
       const getTimestamp = (date) => {
         return {
           utc: date.toUTCString(),
